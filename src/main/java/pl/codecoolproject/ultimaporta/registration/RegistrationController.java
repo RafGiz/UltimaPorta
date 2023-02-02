@@ -1,6 +1,8 @@
 package pl.codecoolproject.ultimaporta.registration;
 
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.Registration;
@@ -11,6 +13,7 @@ import javax.servlet.Registration;
 public class RegistrationController {
 
     private final RegistrationService registrationService;
+
 
 @PostMapping
 public String register(@RequestBody RegistrationRequest request){
