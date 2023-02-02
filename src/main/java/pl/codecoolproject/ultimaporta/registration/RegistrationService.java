@@ -2,15 +2,14 @@ package pl.codecoolproject.ultimaporta.registration;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import pl.codecoolproject.ultimaporta.appuser.AppUser;
 import pl.codecoolproject.ultimaporta.appuser.AppUserRole;
 import pl.codecoolproject.ultimaporta.appuser.AppUserService;
-import org.springframework.mail.javamail.JavaMailSender;
 import pl.codecoolproject.ultimaporta.email.EmailSender;
 import pl.codecoolproject.ultimaporta.registration.token.ConfirmationToken;
 import pl.codecoolproject.ultimaporta.registration.token.ConfirmationTokenService;
 
-import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
 
 @Service
