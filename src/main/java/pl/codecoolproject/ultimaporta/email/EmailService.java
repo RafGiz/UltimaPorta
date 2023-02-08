@@ -25,7 +25,6 @@ public class EmailService implements EmailSender{
     private final JavaMailSender mailSender;
 
 
-
     @Override
     @Async
     public void send(String to, String email) {
