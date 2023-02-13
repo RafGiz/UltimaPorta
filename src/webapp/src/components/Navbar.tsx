@@ -24,18 +24,19 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
+          <Box sx={{display:"flex", flexGrow: 1 }}>
+            <View path={"/"} name={"Home"} />
 
-          <View path={"/"} name={"Home"} />
-          <View path={"/about"} name={"O NAS"} />
-          <View path={"/offer"} name={"OFERTA"} />
-          <View path={"/service"} name={"NASZE USŁUGI"} />
-          <View path={"/contact"} name={"KONTAKT"} />
-          <View path={"/client"} name={"STREFA KLIENTA"} />
-          
+            <View path={"/about"} name={"O NAS"} />
+            <View path={"/offer"} name={"OFERTA"} />
+
+            <View path={"/service"} name={"NASZE USŁUGI"} />
+            <View path={"/contact"} name={"KONTAKT"} />
+            <View path={"/client"} name={"STREFA KLIENTA"} />
+          </Box>
           <Button
-          
             variant='contained'
-            onClick={(e) => navigate(-1)}
+            onClick={() => navigate(-1)}
             color='primary'
           >
             <ArrowBackIosIcon />
