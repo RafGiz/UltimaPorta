@@ -1,12 +1,15 @@
 package pl.codecoolproject.ultimaporta.offer.controlls;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import pl.codecoolproject.ultimaporta.offer.init.CoffinPriceRequest;
 import pl.codecoolproject.ultimaporta.offer.model.Coffin;
 import pl.codecoolproject.ultimaporta.offer.services.CoffinService;
 
 import javax.validation.Valid;
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -15,9 +18,19 @@ public class CoffinController {
 
     private final CoffinService coffinService;
 
+    @Autowired
     public CoffinController(CoffinService coffinService) {
         this.coffinService = coffinService;
     }
+    @PostMapping("/coffinPrice")
+    public BigDecimal calculateCoffinPrice(@RequestBody CoffinPriceRequest coffinPriceRequest) {
+        return coffinService.calculateCoffinPrice(
+                coffinPriceRequest.getType(),
+                coffinPriceRequest.getWoodType(),
+                coffinPriceRequest.getSize());
+    }
+
+
     @GetMapping
     public ResponseEntity<List<Coffin>> getAllCoffins() {
         List<Coffin> coffins = coffinService.findAllCoffins();

@@ -18,14 +18,14 @@ public class FuneralWreath implements Product{
     private BigDecimal price;
     @Column(name = "size")
     private String size;
-    @Column(name = "colour")
-    private String colour;
+    @Column(name = "flowers")
+    private String flowers;
 
-    public FuneralWreath(String name, BigDecimal price, String size, String colour) {
+    public FuneralWreath(String name, BigDecimal price, String size, String flowers) {
         this.name = name;
         this.price = price;
         this.size = size;
-        this.colour = colour;
+        this.flowers = flowers;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class FuneralWreath implements Product{
     public String getSize() {
         return size;
     }
-    public String getColour() {
-        return colour;
+    public String getFlowers() {
+        return flowers;
     }
 }
