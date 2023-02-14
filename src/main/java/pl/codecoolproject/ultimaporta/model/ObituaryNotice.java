@@ -27,9 +27,10 @@ public class ObituaryNotice {
 
 
 
-    //    private final String notice = "Z wielkim zalem zawiadamiamy\n\t ze w dniu" + this.departed.getDateOfDeath() + "zmarl"
-//            +"\n\t\t\t\t\t" + "Śp" + this.departed.getName() + " " + this.departed.getLastName()+ "\t\t\t\t\t\n"
-//            + "Msza sw. odbedzie sie dnia " + this.dateTimeOfFuneral.getDayOfMonth()
+
+//      private final String notice = "Z wielkim zalem zawiadamiamy\n\t ze w dniu" + this.departed.getDateOfDeath() + "zmarl"
+//           +"\n\t\t\t\t\t" + "Śp" + this.departed.getName() + " " + this.departed.getLastName()+ "\t\t\t\t\t\n"
+//          + "Msza sw. odbedzie sie dnia " + this.dateTimeOfFuneral.getDayOfMonth()
 //            + " o godzinie " + this.dateTimeOfFuneral.getHour() + "," + this.dateTimeOfFuneral.getMinute() + "\nw koszciele " + this.nameOfChurch;
 
 

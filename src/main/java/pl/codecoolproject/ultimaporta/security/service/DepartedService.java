@@ -1,4 +1,4 @@
-package pl.codecoolproject.ultimaporta.service;
+package pl.codecoolproject.ultimaporta.security.service;
 
 import org.springframework.stereotype.Service;
 import pl.codecoolproject.ultimaporta.model.Departed;
