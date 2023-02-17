@@ -17,6 +17,8 @@ import pl.codecoolproject.ultimaporta.security.jwt.AuthEntryPointJwt;
 import pl.codecoolproject.ultimaporta.security.jwt.AuthTokenFilter;
 import pl.codecoolproject.ultimaporta.security.service.UserDetailsServiceImpl;
 
+import static org.springframework.boot.autoconfigure.security.servlet.PathRequest.toH2Console;
+
 @Configuration
 @EnableGlobalMethodSecurity(
         // securedEnabled = true,
@@ -81,10 +83,12 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests().antMatchers("/api/auth/**").permitAll()
+                //.requestMatchers(toH2Console())
+                //.permitAll()
                 .antMatchers("/api/test/**").permitAll()
-                .anyRequest().authenticated();
+                .anyRequest().authenticated().and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         http.authenticationProvider(authenticationProvider());
 
