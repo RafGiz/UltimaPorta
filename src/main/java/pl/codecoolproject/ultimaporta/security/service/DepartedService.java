@@ -1,11 +1,13 @@
 package pl.codecoolproject.ultimaporta.security.service;
 
+import lombok.Setter;
 import org.springframework.stereotype.Service;
 import pl.codecoolproject.ultimaporta.model.Departed;
 import pl.codecoolproject.ultimaporta.repository.DepartedRepository;
 
 import java.util.List;
-
+import java.util.Optional;
+@Setter
 @Service
 public class DepartedService {
     private final DepartedRepository departedRepository;
@@ -21,4 +23,6 @@ public class DepartedService {
     public List<Departed> showAllDeparted(){
         return departedRepository.findAll();
     }
+
+
 }
