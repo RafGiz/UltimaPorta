@@ -1,45 +1,34 @@
 package pl.codecoolproject.ultimaporta.offer.model;
 
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import org.springframework.data.rest.webmvc.support.BackendId;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "car")
+@Table(name = "burial")
 @NoArgsConstructor
-public class Car implements Product {
+public class Burial {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "price")
     private BigDecimal price;
-    @Column(name = "type")
-    private String type;
 
-    public Car(String name, BigDecimal price, String type) {
+    public Burial(String name, BigDecimal price) {
         this.name = name;
         this.price = price;
-        this.type = type;
     }
-
-    @Override
     public String getName() {
         return name;
     }
-
-    @Override
     public BigDecimal getPrice() {
         return price;
-    }
-
-    @Override
-    public void setPrice(BigDecimal price) {
-
-    }
-    public String getType() {
-        return type;
     }
 }
