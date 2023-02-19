@@ -24,7 +24,7 @@ const Navbar = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{display:"flex", flexGrow: 1 }}>
+          <Box sx={{ display: "flex", flexGrow: 1 }}>
             <View path={"/"} name={"Home"} />
 
             <View path={"/about"} name={"O NAS"} />
@@ -32,15 +32,17 @@ const Navbar = () => {
 
             <View path={"/service"} name={"NASZE USŁUGI"} />
             <View path={"/contact"} name={"KONTAKT"} />
-            <View path={"/client"} name={"STREFA KLIENTA"} />
           </Box>
-          <Button
+
+          <View path={"/client"} name={"STREFA KLIENTA"} />
+
+          {/* <Button
             variant='contained'
             onClick={() => navigate(-1)}
             color='primary'
           >
             <ArrowBackIosIcon />
-          </Button>
+          </Button> */}
         </Toolbar>
       </AppBar>
     </Box>

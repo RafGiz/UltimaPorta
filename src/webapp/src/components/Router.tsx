@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import { BrowserRouter as Routers, Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import About from "./About";
 import Client from "./Client";
 import Contact from "./Contact";
@@ -12,7 +12,6 @@ import Service from "./Service";
 export default function Router() {
   return (
     <div>
-      <Routers>
         <Navbar />
         <Box>
           <Routes>
@@ -26,7 +25,6 @@ export default function Router() {
           </Routes>
           <Outlet />
         </Box>
-      </Routers>
     </div>
   );
 }
