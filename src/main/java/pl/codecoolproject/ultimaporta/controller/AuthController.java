@@ -35,7 +35,7 @@ import pl.codecoolproject.ultimaporta.security.service.UserDetailsImpl;
 
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api/authorize")
 public class AuthController {
     @Autowired
     AuthenticationManager authenticationManager;
