@@ -59,14 +59,14 @@ public class AuthController {
                 new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        String token = jwtUtils.generateJwtToken(authentication);
+        String jsonWebToken = jwtUtils.generateJwtToken(authentication);
 
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.toList());
 
-        return ResponseEntity.ok(new JwtResponse(token,
+        return ResponseEntity.ok(new JwtResponse(jsonWebToken,
                 userDetails.getUsername(),
                 userDetails.getEmail(),
                 roles));
