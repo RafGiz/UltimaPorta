@@ -1,8 +1,9 @@
+import Login from "./login/Login";
 
 export default function Client() {
   return (
     <div>
-      <h1>KLIENT</h1>
+      <Login />
     </div>
   );
 }
