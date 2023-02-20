@@ -24,5 +24,14 @@ public class DepartedService {
         return departedRepository.findAll();
     }
 
+    public void deleteDeparted(Long id){
+        departedRepository.deleteById(id);
+    }
+
+    public Departed updateDeparted(Long id, Departed departed){
+        return departedRepository.save(departed);
+    }
+
+
 
 }

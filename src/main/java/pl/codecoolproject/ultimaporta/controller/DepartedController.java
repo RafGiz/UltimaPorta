@@ -34,6 +34,17 @@ public class DepartedController {
         return ResponseEntity.status(HttpStatus.CREATED).body(newDeparted);
     }
 
+    @DeleteMapping("/departed/{id}")
+    public void deleteDeparted(@PathVariable Long id){
+        departedService.deleteDeparted(id);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Departed> updateDeparted(@PathVariable Long id, @Valid @RequestBody Departed departed){
+        Departed updatedDeparted = departedService.updateDeparted(id,departed);
+       return ResponseEntity.ok(updatedDeparted);
+    }
+
 
 
 
