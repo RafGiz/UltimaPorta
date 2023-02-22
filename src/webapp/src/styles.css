@@ -1,38 +1,39 @@
 .font-link {
-    font-family: 'Gloock', cursive;
+  font-family: "Gloock", cursive;
 }
 #offer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  #offer-subtext {
-    display: flex;
-    justify-content: space-between;
-    width: 1000px;
-    margin-top: 50px;
-    font-size: 40px;
-  }
-  
-  #offer-subtext button {
-    font-size: 30px;
-  }
-  
-  #offer-subtext > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  #offer-subtext > div > div {
-    display: none;
-  }
-  
-  #offer-subtext > div > div.visible {
-    display: block;
-  }
-  
-  
-  
-  
+  /* background-image: url(${backgroundImage});
+  background-size: cover; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#offer-subtext {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  margin-top: 50px;
+  font-size: 40px;
+}
+
+#offer-subtext button {
+  font-size: 30px;
+}
+
+#offer-subtext > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#offer-subtext > div > div {
+  display: none;
+}
+
+#offer-subtext > div > div.visible {
+  display: block;
+}
+.button:hover {
+  cursor: pointer
+}
