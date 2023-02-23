@@ -9,7 +9,7 @@ import { Button } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 const Navbar = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <Box sx={{ flexGrow: 2 }}>
@@ -26,15 +26,13 @@ const Navbar = () => {
           </IconButton>
           <Box sx={{ display: "flex", flexGrow: 1 }}>
             <View path={"/"} name={"Home"} />
-
             <View path={"/about"} name={"O NAS"} />
             <View path={"/offer"} name={"OFERTA"} />
-
             <View path={"/service"} name={"NASZE USŁUGI"} />
             <View path={"/contact"} name={"KONTAKT"} />
           </Box>
 
-          <View path={"/client"} name={"STREFA KLIENTA"} />
+          <View path={"/login"} name={"LOGIN"} />
 
           {/* <Button
             variant='contained'
@@ -43,6 +41,7 @@ const Navbar = () => {
           >
             <ArrowBackIosIcon />
           </Button> */}
+
         </Toolbar>
       </AppBar>
     </Box>
