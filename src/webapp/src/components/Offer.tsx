@@ -5,8 +5,7 @@ import urnImage from "./images/urn.png";
 import carImage from "./images/car.png";
 import wreathImage from "./images/wreath.png";
 import clothesImage from "./images/clothes.png";
-import '../background.css';
-// import backgroundImage from "./images/background.png";
+import "../background.css";
 
 export default function Offer() {
   const [burialVisible, setBurialVisible] = useState(false);
@@ -32,7 +31,9 @@ export default function Offer() {
           marginTop: "50px",
         }}
       >
-        <u><b>Nasza Oferta</b></u>
+        <u>
+          <b>Nasza Oferta</b>
+        </u>
       </div>
       <div id="offer-subtext">
         <div>
@@ -44,14 +45,16 @@ export default function Offer() {
                 fontSize: "25px",
               }}
             >
-              <u><b>Organizacja Pogrzebu</b></u>
+              <u>
+                <b>Organizacja Pogrzebu</b>
+              </u>
             </div>
           </button>
           <div className={burialVisible ? "visible" : ""}>
-          <div
+            <div
               id="offer-text"
               style={{
-                marginTop: '20px',
+                marginTop: "20px",
                 fontFamily: "Gloock, sans-serif",
                 fontSize: "20px",
               }}
@@ -69,14 +72,16 @@ export default function Offer() {
                 fontSize: "25px",
               }}
             >
-              <u><b>Organizacja Kremacji</b></u>
+              <u>
+                <b>Organizacja Kremacji</b>
+              </u>
             </div>
           </button>
           <div className={cremationVisible ? "visible" : ""}>
-          <div
+            <div
               id="offer-text"
               style={{
-                marginTop: '20px',
+                marginTop: "20px",
                 fontFamily: "Gloock, sans-serif",
                 fontSize: "20px",
               }}
@@ -181,4 +186,3 @@ export default function Offer() {
     </div>
   );
 }
-
