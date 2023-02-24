@@ -1,11 +1,13 @@
-import { BrowserRouter } from "react-router-dom";
 import Router from "./components/Router";
+import { withAxiosIntercepted } from "./hooks/withAxiosIntercepted";
+import './styles.css';
+import './background.css';
 
-export default function App() {
+function App() {
 
   return (
-    <BrowserRouter>
       <Router />
-    </BrowserRouter>
   );
 }
+
+export default withAxiosIntercepted(App)
