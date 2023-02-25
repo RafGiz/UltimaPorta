@@ -14,9 +14,9 @@ const Navbar = () => {
   return (
     <Box sx={{ flexGrow: 2 }}>
       <AppBar position='static'>
-        <Toolbar>
+        <Toolbar sx={{ backgroundColor: "black"}}>
       
-          <Box sx={{ display: "flex", flexGrow: 1 }}>
+          <Box sx={{ display: "flex", flexGrow: 1, color: "inherit"}}>
             <View path={"/"} name={"Home"} />
             <View path={"/about"} name={"O NAS"} />
             <View path={"/offer"} name={"OFERTA"} />

@@ -6,6 +6,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { DrawerContextProvider } from "./context/DrawerContext";
 import { UserContextProvider } from "./context/UserContext";
+import './background.css';
 
 function App() {
 
