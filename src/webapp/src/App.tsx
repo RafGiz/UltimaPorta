@@ -1,12 +1,15 @@
 import Router from "./components/Router";
 import { withAxiosIntercepted } from "./hooks/withAxiosIntercepted";
 import './styles.css';
-import './background.css';
+import { AppContainer } from "./App.styles";
 
 function App() {
 
   return (
-      <Router />
+    <AppContainer>
+       <Router />
+    </AppContainer>
+     
   );
 }
 
