@@ -20,7 +20,7 @@ const Navbar = () => {
             <View path={"/"} name={"Home"} />
             <View path={"/about"} name={"O NAS"} />
             <View path={"/offer"} name={"OFERTA"} />
-            <View path={"/service"} name={"NASZE USŁUGI"} />
+            {/* <View path={"/service"} name={"NASZE USŁUGI"} /> */}
             <View path={"/contact"} name={"KONTAKT"} />
           </Box>
           <Button onClick={toggleProfileDrawer} style={{ cursor: "pointer"}}>

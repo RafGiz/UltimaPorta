@@ -11,6 +11,13 @@ export default function Home() {
       <div className="welcome=message">
         <h1>Witamy w Wirtualnym Domie Pogrzebowym</h1>
         </div>
+        <div className="quote-container">
+        <p className="quote-text">
+          "Kogo kiedykolwiek prawdziwie kochaliśmy nigdy już nie możemy stracić;
+          tych których głeboko kochaliśmy stają się częścią nas samych."{" "}
+        </p>
+        <p className="quote-author">- Helen Keller</p>
+      </div>
         <table width="1000"  align="center">
           <td>
             <tr><p>Kim jesteśmy</p></tr>
