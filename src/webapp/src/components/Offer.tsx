@@ -1,12 +1,15 @@
 import { useState } from "react";
-
 import coffinImage from "./images/coffin.png";
 import urnImage from "./images/urn.png";
 import carImage from "./images/car.png";
 import wreathImage from "./images/wreath.png";
 import clothesImage from "./images/clothes.png";
+
 import "../background.css";
-import Button from "@mui/material/Button";
+
+import { Button } from "@mui/material";
+import View from "./View";
+
 
 export default function Offer() {
   const [burialVisible, setBurialVisible] = useState(false);
@@ -97,6 +100,7 @@ export default function Offer() {
   }
 
   return (
+    <div>
     <div id="offer-container">
       <div
         id="offer-text"
@@ -206,7 +210,8 @@ export default function Offer() {
         </div>
       </div>
       <div style={{ display: "flex" }}>
-        <div style={{ marginRight: "50px", marginTop: "300px" }}>
+
+        <div style={{ marginRight: "50px", marginTop: "100px" }}>
           <div onClick={handleCoffinClick}>
             <img
               src={coffinImage}
@@ -250,8 +255,9 @@ export default function Offer() {
         </div>
 
         <div
-          style={{ marginRight: "50px", marginTop: "300px", cursor: "pointer" }}
+          style={{ marginRight: "50px", marginTop: "100px", cursor: "pointer" }}
         >
+
           <img
             src={urnImage}
             alt="Urns"
@@ -295,8 +301,9 @@ export default function Offer() {
             </div>
           </div>
         </div>
+
         <div
-          style={{ marginRight: "50px", marginTop: "300px", cursor: "pointer" }}
+          style={{ marginRight: "50px", marginTop: "100px", cursor: "pointer" }}
         >
           <img
             src={carImage}
@@ -340,9 +347,9 @@ export default function Offer() {
             </div>
           </div>
         </div>
-        <div
-          style={{ marginRight: "50px", marginTop: "300px", cursor: "pointer" }}
-        >
+
+        <div style={{ marginRight: "50px", marginTop: "100px", cursor: "pointer"}}>
+
           <img
             src={wreathImage}
             alt="Funeral Wreaths"
@@ -390,7 +397,7 @@ export default function Offer() {
             style={{
               width: "200px",
               height: "200px",
-              marginTop: "300px",
+              marginTop: "100px",
               cursor: "pointer",
             }}
             onClick={handleClothesClick}
@@ -436,5 +443,15 @@ export default function Offer() {
         </div>
       </div>
     </div>
-  );
+     <div
+     style={{
+       marginTop: "20px",
+     }}>
+     <Button>Powrót na stronę główną<View path={"/"} name={"Home"} /></Button>
+     </div>
+     </div>
+
+  )
+  ;
+  
 }
