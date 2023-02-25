@@ -96,3 +96,6 @@ p {
 .button:hover {
   cursor: pointer;
 }
+.invisible {
+  display: none;
+}
