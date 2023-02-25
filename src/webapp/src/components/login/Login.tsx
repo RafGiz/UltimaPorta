@@ -1,5 +1,9 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { AuthApi } from "../../api/AuthApi";
+import { ACCESS_TOKEN } from "../../constants/constants";
+import UserContext from "../../context/UserContext";
 import {
   InputContainer,
   LoginButton,
@@ -8,12 +12,8 @@ import {
   StyledHeading,
   ValidationError,
 } from "./Login.styles";
-import { toast } from "react-toastify";
-import { ACCESS_TOKEN } from "../../constants/constants";
-// tsconfig.json
-import UserContext from "../../context/UserContext";
-import { useNavigate } from "react-router-dom";
 
+// tsconfig.json
 
 export default function Login() {
   const [username, setUsername] = useState<string>("");
@@ -21,9 +21,9 @@ export default function Login() {
   const [isUsernameValid, setIsUsernameValid] = useState<boolean>(true);
   const [isPasswordValid, setIsPasswordValid] = useState<boolean>(true);
 
-  const navigate = useNavigate();
-
   const { userModifier } = useContext(UserContext);
+
+  const navigate = useNavigate();
 
   const onLoginClicked = useCallback(async () => {
     try {
@@ -33,7 +33,9 @@ export default function Login() {
       });
 
       localStorage.setItem(ACCESS_TOKEN, result.data.accessToken);
+
       userModifier({ ...result.data });
+
       toast.success("Poprawnie zalogowano", {
         position: toast.POSITION.TOP_RIGHT,
       });

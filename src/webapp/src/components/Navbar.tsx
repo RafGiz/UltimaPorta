@@ -2,9 +2,13 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 import View from "./View";
+import { Button } from "@mui/material";
+import { useContext } from "react";
+import { DrawerContext } from "../context/DrawerContext";
 
 
 const Navbar = () => {
+  const {toggleProfileDrawer} = useContext(DrawerContext);
   // const navigate = useNavigate();
 
   return (
@@ -19,17 +23,12 @@ const Navbar = () => {
             <View path={"/service"} name={"NASZE USŁUGI"} />
             <View path={"/contact"} name={"KONTAKT"} />
           </Box>
+          <Button onClick={toggleProfileDrawer} style={{ cursor: "pointer"}}>
+            <View path={"/login"} name={"LOGIN"} 
+          /></Button>
 
-          <View path={"/login"} name={"LOGIN"} />
-
-          {/* <Button
-            variant='contained'
-            onClick={() => navigate(-1)}
-            color='primary'
-          >
-            <ArrowBackIosIcon />
-          </Button> */}
-
+           
+         
         </Toolbar>
       </AppBar>
       <div className="card">
