@@ -12,7 +12,7 @@ export default function About() {
               <div>
                 <p>
                   {" "}
-                  Domu Pogrzebowy Ultima Porta - miejsce, które
+                  Dom Pogrzebowy Ultima Porta - miejsce, które
                   od lat zapewnia godne pożegnanie dla najbliższych zmarłych.
                   Nasza firma powstała z pasji i zaangażowania w troskę o
                   każdego klienta, któremu pomagamy w tak trudnym momencie.
