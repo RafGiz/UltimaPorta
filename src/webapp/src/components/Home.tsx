@@ -9,7 +9,7 @@ export default function Home() {
         <img id="logo-image" src={logoImage} alt="Logo" />        
       </div>
       <div className="welcome=message">
-        <h1>Witamy w Wirtualnym Domie Pogrzebowym</h1>
+        <h1>Witamy w Wirtualnym Domu Pogrzebowym</h1>
         </div>
         <div className="quote-container">
         <p className="quote-text">
